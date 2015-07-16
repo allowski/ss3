@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+		<title>...</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css?md=1437066958">
+		<link rel="stylesheet" type="text/css" href="css/a4pp.css?md=1437066958">
+		<link rel="stylesheet" type="text/css" href="css/custom.css?md=1437066958">
+	</head>
+	<body>
+
+		<div id="login-form" class="hidden">
+			<ul class="nav nav-tabs nav-justified">
+				<li class="active"><a href="#login">Iniciar </a></li>
+				<li><a onclick="a4pp_register_form();return false;" href="#">Registrarse</a></li>
+			</ul>
+			<form class="form-signin" onsubmit="a4pp_login(this); return false;">
+				<div class="form-form">
+			        <h2 class="form-signin-heading"></h2>
+			        <input type="hidden" name="action" value="login">
+			        <label for="inputEmail" class="sr-only">Email</label>
+			        <input type="email" id="inputEmail" name="user_email" class="form-control" placeholder="Email" required="" autofocus="">
+			        <label for="inputPassword" class="sr-only">Password</label>
+			        <input type="password" id="inputPassword" name="user_password" class="form-control" placeholder="Contraseña" required="">
+			        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+			    </div>
+		      </form>
+		</div>
+
+		<div id="register-form" class="hidden">
+			<ul class="nav nav-tabs nav-justified">
+				<li><a href="#login" onclick="a4pp_login_form();return false;" href="#">Iniciar </a></li>
+				<li class="active"><a href="#">Registrarse</a></li>
+			</ul>
+			<form class="form-signin" onsubmit="a4pp_register(this); return false;">
+				<div class="form-form">
+			        <h2 class="form-signin-heading"></h2>
+			        <input type="hidden" name="action" value="register">
+			         <label for="inputName" class="sr-only">Nombre</label>
+			        <input type="name" id="inputName" name="user_name" class="form-control" placeholder="Nombre" required="" autofocus="">
+			         <label for="inputSName" class="sr-only">Apellidos</label>
+			        <input type="name" id="inputSName" name="user_surname" class="form-control" placeholder="Apellidos" required="">
+			        <label for="inputEmail" class="sr-only">Email</label>
+			        <input type="email" id="inputEmail" name="user_email" class="form-control" placeholder="Email" required="">
+			        <label for="inputPassword" class="sr-only">Password</label>
+			        <input type="password" id="inputPassword" name="user_password" class="form-control" placeholder="Contraseña" required="">
+			        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+			    </div>
+		      </form>
+		</div>
+
+		<div id="viewport">
+			<div class="material-bar">
+				<div class="container">
+					<a id="backButton" class="navbar-item" href="#">
+						<span class="glyphicon glyphicon-triangle-left"></span>
+					</a>
+					<a class="navbar-item"><span id="appTitle"></span></a>
+					<a class="navbar-item pull-right" id="btnMenu"><span class="glyphicon glyphicon-option-vertical"></span></a>
+					<a class="navbar-item pull-right" id="goSearch"><span class="glyphicon glyphicon-search" id="iconSearch"></span></a>
+					<a class="navbar-item pull-right" id="update"><span id='updateIcon' class="glyphicon glyphicon-refresh"></span></a>
+					<div class="navbar-form" style="display:none;" id="searchForm"><input type="text" class="form-control" id="searchBox"></div>
+				</div>
+			</div>
+			<div class="content">
+				<div class='dropdown' id="dMenu">
+					<ul class='dropdown-menu open' style="right:0;left:auto;top:0px;">
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- scripts -->
+		<script src="phonegap.js"></script>
+		<script src="js/fastclick.js?md=1437066958"></script>
+		<script src="datos.js?md=1437066958" type="text/javascript"></script>
+		<script src="js/4pp.js?md=1437066958"></script>
+		<script src="js/app.js?md=1437066958"></script>
+	</body>
+</html>
